@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Odin Calculator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Calculator</h1>
+      <div class="container">
+        <div class="screen">
+          <input type="text" id="displayPrevOp" disabled />
+          <input type="text" id="displayCurrentOp" disabled />
+        </div>
+        <div class="button">
+          <div class="button1">
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="deleteLast()">DEL</button>
+          </div>
+          <div class="button2">
+            <button onclick="appendNumber(7)">7</button>
+            <button onclick="appendNumber(8)">8</button>
+            <button onclick="appendNumber(9)">9</button>
+            <button onclick="appendOperator('/')">/</button>
+          </div>
+          <div class="button2">
+            <button onclick="appendNumber(4)">4</button>
+            <button onclick="appendNumber(5)">5</button>
+            <button onclick="appendNumber(6)">6</button>
+            <button onclick="appendOperator('*')">*</button>
+          </div>
+          <div class="button2">
+            <button onclick="appendNumber(1)">1</button>
+            <button onclick="appendNumber(2)">2</button>
+            <button onclick="appendNumber(3)">3</button>
+            <button onclick="appendOperator('-')">-</button>
+          </div>
+          <div class="button2">
+            <button onclick="appendNumber(0)">0</button>
+            <button onclick="appendOperatorDecimal('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendOperator('+')">+</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <a href="https://github.com/RahmatSatyawan" target="_blank">
+          RST Project
+        </a>
+      </p>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
